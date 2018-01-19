@@ -7,6 +7,7 @@ var Switch = ReactRouter.Switch;
 var Nav = require('./Navbar');
 var Home = require('./Home');
 var Battle = require('./Battle');
+var Results = require('./Results');
 
 class App extends React.Component { //ES6 syntax
     render () {     //returns the specific UI of the element.
@@ -17,6 +18,7 @@ class App extends React.Component { //ES6 syntax
                     <Switch> 
                         <Route exact path="/" component={Home} />
                         <Route exact path="/battle" component={Battle} />
+                        <Route path="/battle/results" component={Results} />
                         <Route exact path="/popular" component={Popular} />
                         <Route render={function () {
                             return <p>Not Found</p>
